@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: n8n
+    runtime: image
+    image:
+      url: docker.io/n8nio/n8n:latest
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5678
+      - key: N8N_HOST
+        generateValue: false
+      - key: WEBHOOK_URL
+        generateValue: false
